@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'account/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'account/css/final.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="final">
+        <h1>Behold! Your artwork!</h1>
+        <div class="control">
+            <a href="/"><button id="continue">Continue creating</button></a>
+            <a href="{% static 'account/img/Concat_images.jpg' %}" download="ComicPage"><button id="download">Download</button></a>
+        </div>
+        <img src="{% static 'account/img/Concat_images.jpg' %}">
+    </div>
+
+
+{% endblock %}
